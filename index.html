@@ -1,60 +1,67 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UI For Movies</title>
+<title>UI For Movies Premium</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="premium-style.css">
 </head>
 <body>
-<header class="hero">
-<nav>
+
+<nav id="navbar">
 <img src="nl.png" class="logo">
+<div>
+<button class="lang">English</button>
 <button class="signin">Sign In</button>
+</div>
 </nav>
 
+<header class="hero">
+<div class="overlay"></div>
 <div class="hero-content">
-<h1>Unlimited Movies, TV Shows & More</h1>
-<p>Watch anywhere. Cancel anytime.</p>
-<div class="cta">
-<input type="email" placeholder="Enter your email">
-<button>Get Started</button>
+<h1>Unlimited movies, TV shows and more</h1>
+<p>Starts at ₹149. Cancel anytime.</p>
+<div class="email-box">
+<input type="email" placeholder="Email address">
+<button>Get Started ></button>
 </div>
 </div>
 </header>
 
 <section class="section">
 <h2>Trending Now</h2>
-<div class="movies-grid">
-<img src="puspha.png">
-<img src="dakku.png">
-<img src="squidgame.png">
-<img src="lucky bhaskar.png">
-<img src="venom.png">
-<img src="game changer.png">
-<img src="dragon.png">
-<img src="CHAVVA.png">
-<img src="leo.png">
-<img src="kingdom.png">
+<div class="carousel">
+<div class="track">
+<img src="puspha.png"><img src="dakku.png"><img src="squidgame.png"><img src="lucky bhaskar.png"><img src="venom.png"><img src="game changer.png"><img src="dragon.png"><img src="CHAVVA.png"><img src="leo.png"><img src="kingdom.png">
+</div>
 </div>
 </section>
 
-<section class="features">
-<div class="card"><h3>Watch Everywhere</h3><p>Phone, TV, laptop and tablet.</p></div>
-<div class="card"><h3>Download Shows</h3><p>Save content for offline viewing.</p></div>
-<div class="card"><h3>Kids Profiles</h3><p>Dedicated experience for children.</p></div>
-<div class="card"><h3>4K Streaming</h3><p>Enjoy stunning picture quality.</p></div>
+<section class="section cards">
+<div class="card"><h3>Enjoy on your TV</h3><p>Watch on Smart TVs and more.</p></div>
+<div class="card"><h3>Download shows</h3><p>Save favourites easily.</p></div>
+<div class="card"><h3>Watch everywhere</h3><p>Phone, tablet, laptop and TV.</p></div>
+<div class="card"><h3>Kids profiles</h3><p>Create profiles for children.</p></div>
 </section>
 
-<section class="faq">
+<section class="section faq">
 <h2>Frequently Asked Questions</h2>
-<div class="faq-item"><button>What is Netflix?</button><div class="ans">Streaming platform for movies and shows.</div></div>
-<div class="faq-item"><button>How much does it cost?</button><div class="ans">Different plans are available.</div></div>
-<div class="faq-item"><button>Where can I watch?</button><div class="ans">Any supported device with internet.</div></div>
+<div class="faq-item"><div class="q">What is Netflix?<span>+</span></div><div class="answer"><p>Streaming platform for movies and TV shows.</p></div></div>
+<div class="faq-item"><div class="q">How much does it cost?<span>+</span></div><div class="answer"><p>Depends on your chosen plan.</p></div></div>
+<div class="faq-item"><div class="q">Where can I watch?<span>+</span></div><div class="answer"><p>TV, mobile, tablet and laptop.</p></div></div>
 </section>
 
-<script src="script.js"></script>
+<footer>
+<div class="footer-grid">
+<div><a href="#">FAQ</a><a href="#">Privacy</a><a href="#">Jobs</a></div>
+<div><a href="#">Help Centre</a><a href="#">Terms</a><a href="#">Contact</a></div>
+<div><a href="#">Account</a><a href="#">Investor Relations</a><a href="#">Media Centre</a></div>
+<div><a href="#">Ways to Watch</a><a href="#">Legal Notices</a><a href="#">Only on Netflix</a></div>
+</div>
+</footer>
+<script src="premium-script.js"></script>
 </body>
 </html>
