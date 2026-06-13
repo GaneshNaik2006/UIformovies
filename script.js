@@ -1,14 +1,42 @@
-const faqs = document.querySelectorAll('.faq-item');
+// FAQ Accordion
+const faqButtons = document.querySelectorAll(".faq-item button");
 
-faqs.forEach(faq => {
-  faq.querySelector('.q').addEventListener('click', () => {
-    // close others
-    faqs.forEach(item => {
-      if (item !== faq) item.classList.remove('active');
+faqButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const currentItem = button.parentElement;
+
+        document.querySelectorAll(".faq-item").forEach(item => {
+            if (item !== currentItem) {
+                item.classList.remove("active");
+            }
+        });
+
+        currentItem.classList.toggle("active");
     });
-
-    // toggle clicked
-    faq.classList.toggle('active');
-  });
 });
 
+// Navbar background on scroll
+window.addEventListener("scroll", () => {
+    const nav = document.querySelector("nav");
+
+    if (window.scrollY > 50) {
+        nav.style.background = "rgba(0,0,0,0.9)";
+        nav.style.backdropFilter = "blur(10px)";
+    } else {
+        nav.style.background = "transparent";
+        nav.style.backdropFilter = "none";
+    }
+});
+
+// Movie cards hover animation
+const movieCards = document.querySelectorAll(".movies-grid img");
+
+movieCards.forEach(card => {
+    card.addEventListener("mouseenter", () => {
+        card.style.transform = "scale(1.08)";
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.transform = "scale(1)";
+    });
+});
